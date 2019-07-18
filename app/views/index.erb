@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>APi TEST</title>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Maropost API Test</a>
+    </nav>
+    <div class="container mt-2">
+      <form method='post' action= '/api_validate'>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Account Number</label>
+          <input type="number" class="form-control" id="account_number" placeholder="Enter Account Number" required name="account_number">
+          <small id="emailHelp" class="form-text text-muted">Add Your Maropost Account Number</small>
+        </div>
+        <div class="form-group">
+          <label for="auth_token">Authentication Token</label>
+          <input type="text" class="form-control" id="auth_token" placeholder="Auth Token" required name="auth_token">
+          <small  class="form-text text-muted">Add Your Maropost Authentication Token</small>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Module Name</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" name="module_name">
+            <option value="Campaigns">Campaigns</option>
+            <option value="AbTestCampaigns">AB Test Campaigns</option>
+            <option value="TransactionalCampaigns">Transactional Campaigns</option>
+            <option value="Contacts">Contacts</option>
+            <option value="Journeys">Journeys</option>
+            <option value="ProductsAndRevenue">Products and Revenue</option>
+            <option value="RelationalTableRows">Relational Table Rows</option>
+            <option value="Reports">Reports</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="method_name">Method Name</label>
+          <input type="text" class="form-control" id="auth_token" placeholder="Method Name" required name="method_name">
+          <small  class="form-text text-muted">Enter method name</small>
+        </div>
+        <div class="form-group">
+           <label for="exampleFormControlTextarea1">Test case</label>
+           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+  </body>
+</html>
