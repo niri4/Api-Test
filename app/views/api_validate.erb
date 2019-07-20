@@ -1,0 +1,22 @@
+
+<section>
+  <% unless @result.class.to_s == 'String' %>
+    <pre><code>
+      <% if @result.success %>
+      <h3>Success respone</h3>
+        <% if @result.data.class.to_s == 'Array'%>
+          <%@result.data.each do |data| %>
+    <%= data %>
+          <% end %>
+        <%else%>
+    <%= @result.data %>
+        <%end%>
+      <% else %>
+      <h3>Error response</h3>
+  <%= @result.errors %>
+      <%end%>
+    </code></pre>
+  <%else%>
+    <p><%= @result%> </p>
+  <% end%>
+</section>
